@@ -1,0 +1,63 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+    
+#bio-container
+    img
+        width: 175px
+        height: 175px
+        border-radius: 50%
+        margin-bottom: 25px
+    h2
+        margin-bottom: 25px
+
+        @include base-mixins.mobile
+            display: none
+    p
+        margin-bottom: 20px
+
+        @include base-mixins.mobile
+            max-width: 60%
+            margin: 10px auto
+
+    @include base-mixins.mobile
+        min-height: auto
+        border-right: none
+        border-bottom: 5px solid variables.$bio-border-color
+
+#welcome-text
+    font-weight: bold
+
+#social-container
+    display: flex
+    justify-content: center
+    border-bottom: 1px solid variables.$border-color
+    margin-bottom: 25px
+    padding-bottom: 25px
+
+    li
+        flex: 1 1 0
+        max-width: 60px
+
+        a
+            color: variables.$main-color
+            font-size: 1.5rem
+
+#email-container
+    display: flex
+    justify-content: center
+    align-items: center
+
+    ion-icon, a
+        flex: 1 1 0
+
+    a
+        color: variables.$main-text-color
+        text-decoration: none
+        max-width: 165px
+
+    ion-icon
+        color: variables.$main-color
+        font-size: 1.5rem 
+        margin-right: 0.5rem
+        max-width: 20px
+       

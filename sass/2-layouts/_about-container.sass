@@ -1,0 +1,87 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+#name
+    font-size: 42px
+    margin-bottom: 15px
+
+#title
+    font-size: 25px
+    margin-bottom: 15px
+    font-weight: bold
+
+.description
+    max-width: 75%
+    margin-bottom: 10px
+
+    @include base-mixins.mobile
+        margin: 10px auto
+        max-width: 100%
+        line-height: 26px
+
+#btn-projects
+    font-weight: bold
+    font-size: 1.2rem
+    color: variables.$main-text-color
+    background-color: variables.$main-color
+    border: 2px solid variables.$main-color
+    border-radius: 5px
+    transform: .5s
+    margin: 25px 0
+    padding: 12px 10px
+    width: 200px
+    text-align: center
+    display: flex
+
+    ion-icon, span
+        flex: auto
+         
+    ion-icon
+        font-size: 20px
+        width: 20px
+
+    &:hover
+        background-color: transparent
+
+    @include base-mixins.mobile
+        margin:20px auto
+
+#skills-section-title
+    border-top: 1px solid variables.$border-color
+    padding-top: 20px
+    margin-bottom: 20px
+    font-size: 2rem
+
+#skills-container
+    display: flex
+    flex-wrap: wrap
+    margin-top: 25px
+
+.skills-box
+    flex: 1 1 33%
+    max-width: 33%
+    margin-bottom: 35px
+
+    i
+        font-size: 2rem
+        margin-right: .5rem
+
+        @include base-mixins.mobile
+            font-size: 3rem
+
+    @include base-mixins.mobile
+        flex: 1 1 100%
+        max-width: 100%
+        margin-bottom: 40px
+        
+
+
+.skills-title
+    font-size: 1.4rem
+    margin-bottom: 25px
+    font-weight: bold
+    padding-left: 10px
+    border-left: 5px solid variables.$main-color
+
+    @include base-mixins.mobile
+        border-left: none
